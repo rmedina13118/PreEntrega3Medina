@@ -197,13 +197,18 @@ p.paragraph-primary {
 }
 
 .grid-store {
-    padding-top: 60px;
+    padding-top: 25px;
     display: flex;
     flex-direction: row;
+    height: 100vh;
+    overflow: auto;
+    scrollbar-width: none;
 }
 
 .filters {
     margin: 0 50px;
+    position: sticky;
+    top: 0;
 }
 
 .search input {
@@ -240,17 +245,17 @@ p.paragraph-primary {
 
 #gridProducts {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 16px;
     padding: 0 50px;
 
 }
 
 .product-card {
-    border: 1px solid #ddd;
+    border: 1px solid #f4f4f4;
     padding: 16px;
     text-align: center;
-    border-radius: 8px;
+    border-radius: 20px;
     background-color: #fff;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     display: flex;
@@ -258,6 +263,7 @@ p.paragraph-primary {
     align-items: center;
     justify-content: space-between;
     width: 100%;
+    gap: 10px;
 }
 
 .product-card img {
@@ -267,6 +273,16 @@ p.paragraph-primary {
     object-fit: contain;
 }
 
+.product-card h3 {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.product-card p {
+    font-size: 18px;
+    font-weight: 600;
+}
+
 .product-card button {
     margin-top: 8px;
     padding: 8px 16px;
@@ -274,11 +290,11 @@ p.paragraph-primary {
     color: #000;
     font-weight: 700;
     border: none;
-    border-radius: 4px;
+    border-radius: 40px;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
 .product-card button:hover {
-    background-color: #F2AF29;
+    background-color: #fec451;
 }

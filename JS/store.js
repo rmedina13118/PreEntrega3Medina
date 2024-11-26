@@ -45,7 +45,7 @@ const products = [
     },
     {
         id: 5,
-        name: "Guitarra eleéctrica Fender - Telecaster standard",
+        name: "Guitarra eléctrica Fender - Telecaster standard",
         price: 2000000,
         stock: 5,
         category: 'Cuerdas',
@@ -105,7 +105,8 @@ const products = [
         name: "Piano Digital Roland - FP E50",
         price: 6000000,
         stock: 5,
-        category: 'Teclados'
+        category: 'Teclados',
+        img: 'https://m.media-amazon.com/images/I/61RiFWYpWSL._AC_SX569_.jpg'
     }
 
 
@@ -163,6 +164,19 @@ const price = document.createElement('p')
 }
 
 renderProducts(products)
+
+
+const searchProducts = document.getElementById('SearchStore')
+
+searchProducts.addEventListener('input', () => {
+    const searchTerm = searchProducts.value.toLowerCase()
+
+    const filteredProducts = products.filter(product => {
+        return product.name.toLowerCase().includes(searchTerm)
+    })
+
+    renderProducts(filteredProducts)
+})
 
 
 

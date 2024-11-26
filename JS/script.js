@@ -95,7 +95,7 @@ let finalPrice = 0
 let returnShopping = true
 let purchaseSummary = ""
 
-const buttonStore = document.getElementById('button-store')
+//const buttonStore = document.getElementById('button-store')
 
 buttonStore.addEventListener('click', () => {
     const fullName = prompt("Ingresa tu nombre por favor:").toUpperCase()

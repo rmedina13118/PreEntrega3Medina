@@ -138,7 +138,7 @@ function renderProducts(products) {
         productDiv.className = 'product-card' 
 
         const img = document.createElement('img')
-        img.src = product.img || 'https://via.placeholder.com/150'
+        img.src = product.img || '../assets/imgs/150.png'
 
         const name = document.createElement('h3')
         name.textContent = product.name
